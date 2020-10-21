@@ -46,3 +46,17 @@ export const MoviesInfo = styled.ul`
   list-style: none;
   line-height: 1.5rem;
 `;
+
+export const MoreInfoButton = styled.button`
+  width: 25%;
+  font-family: 'Source Sans Pro';
+  font-weight: 700;
+  outline: none;
+  border-radius: 4px;
+  border: none;
+  color: ${black};
+  background-color: ${yellow};
+  padding: 13px 27px;
+  margin-top: 10px;
+  cursor: pointer;
+`;

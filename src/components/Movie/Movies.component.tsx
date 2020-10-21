@@ -10,6 +10,7 @@ import {
   GreenSaber,
   RedSaber,
   MoviesInfo,
+  MoreInfoButton,
 } from './Movie.styles';
 
 type Props = {
@@ -38,6 +39,13 @@ const Movies = ({ movie }: Props): JSX.Element => {
         </MoviesInfo>
         <RedSaber src={redSaber} alt="Red saber" />
       </MoviesContainer>
+      <div>
+        <MoreInfoButton
+          onClick={() => alert(`Hi! This movies is ${movie.episode_id}`)}
+        >
+          READ MORE
+        </MoreInfoButton>
+      </div>
     </MovieList>
   );
 };
