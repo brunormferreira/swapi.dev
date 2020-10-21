@@ -6,6 +6,6 @@ interface ColorsInterface {
 
 export const colors: ColorsInterface = {
   yellow: '#FFE81F',
-  black: '#224D74', // TODO
+  black: '#000000',
   white: '#FFF',
 };
