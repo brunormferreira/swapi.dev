@@ -1,9 +1,20 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+import { colors } from '../assets/styles/variables';
+
+const { white } = colors;
+
+export const ContainerApp = styled.div`
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
 
-  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: ${white};
+
+  height: 100vh;
+  width: 100vw;
 `;

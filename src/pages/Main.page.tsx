@@ -1,15 +1,22 @@
 import React from 'react';
 
 import Brand from '../components/Brand/Brand.component';
+import Footer from '../components/Footer/Footer.component';
 
-import { Container } from './Main.styles';
+import { ContainerApp } from './Main.styles';
 
 const Main: React.FC = () => {
   return (
-    <Container>
+    <ContainerApp>
       <Brand />
-      <p>Hello from main page</p>
-    </Container>
+      <div>
+        <p>Hello from main page</p>
+        <p>Hello from main page</p>
+        <p>Hello from main page</p>
+        <p>Hello from main page</p>
+      </div>
+      <Footer />
+    </ContainerApp>
   );
 };
 
