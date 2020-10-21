@@ -1,15 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-import Movies from '../Movie/Movies.component';
+import Movie from '../Movie/Movies.component';
 
-import { List } from './MovieList.styles';
+import { getMovies } from '../../services/getMovies';
 
-const MovieList: React.FC = ({ movies }: any) => (
-  <List>
-    {movies.map((movie: any) => (
-      <Movies key={movie.episode_id} movie={movie} />
-    ))}
-  </List>
-);
+const MovieList: React.FC = () => {
+  const [movies, setMovies] = useState<any>([]);
+
+  useEffect(() => {
+    getMovies().then(({ results }) => {
+      const dataSorted = results.sort(
+        (a: any, b: any) => a.episode_id - b.episode_id,
+      );
+
+      setMovies(dataSorted);
+    });
+  }, [movies]);
+
+  return (
+    <main>
+      {movies.map((movie: any) => (
+        <Movie key={movie.episode_id} movie={movie} />
+      ))}
+    </main>
+  );
+};
 
 export default MovieList;
