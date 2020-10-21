@@ -15,6 +15,6 @@ export const ContainerApp = styled.div`
 
   color: ${white};
 
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 `;

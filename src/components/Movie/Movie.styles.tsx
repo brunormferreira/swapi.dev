@@ -5,7 +5,6 @@ import { colors } from '../../assets/styles/variables';
 const { black, white, yellow } = colors;
 
 export const MovieList = styled.li`
-  width: 70%;
   margin: 15px 1% 15px;
   padding: 15px 20px;
   display: flex;
