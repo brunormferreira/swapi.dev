@@ -59,4 +59,8 @@ export const MoreInfoButton = styled.button`
   padding: 13px 27px;
   margin-top: 10px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #f3f057;
+  }
 `;
