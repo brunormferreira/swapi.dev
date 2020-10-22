@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { colors } from '../../assets/styles/variables';
 
-const { black, white, yellow } = colors;
+const { black, white, yellow, lightYellow } = colors;
 
 export const MovieListWrapper = styled.li`
   margin: 15px 1% 15px;
@@ -61,6 +61,6 @@ export const MoreInfoButton = styled.button`
   cursor: pointer;
 
   &:hover {
-    background-color: #f3f057;
+    background-color: ${lightYellow};
   }
 `;

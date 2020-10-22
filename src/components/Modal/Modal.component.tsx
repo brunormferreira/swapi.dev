@@ -10,6 +10,8 @@ import {
   ModalContainer,
   TitleModal,
   ModalBody,
+  CloseButton,
+  ModalContent,
 } from './Modal.styles';
 
 type Props = {
@@ -30,13 +32,13 @@ const Modal = ({ movie }: Props): JSX.Element => {
       <ContainerBackground />
       <ModalFullScreen>
         <ModalContainer ref={dialogContainer}>
-          <button type="button" onClick={onClose}>
+          <CloseButton type="button" onClick={onClose}>
             X
-          </button>
+          </CloseButton>
           <ModalBody>
             <TitleModal>{movie.title}</TitleModal>
-            <p style={{ color: 'black' }}>~ Episode {movie.episode_id}</p>
-            <div style={{ color: 'black' }}>{movie.opening_crawl}</div>
+            <ModalContent>~ Episode {movie.episode_id}</ModalContent>
+            <ModalContent>{movie.opening_crawl}</ModalContent>
           </ModalBody>
         </ModalContainer>
       </ModalFullScreen>

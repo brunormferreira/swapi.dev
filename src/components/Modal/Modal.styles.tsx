@@ -1,12 +1,16 @@
 import styled from 'styled-components';
 
+import { colors } from '../../assets/styles/variables';
+
+const { white, yellow, gray, overlay } = colors;
+
 export const ContainerBackground = styled.div`
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #3d3d3d 0% 0% no-repeat padding-box;
+  background: ${overlay} 0% 0% no-repeat padding-box;
   opacity: 0.3;
   z-index: 99;
 `;
@@ -27,22 +31,42 @@ export const ModalContainer = styled.div`
   position: fixed;
   width: 472px;
   min-height: 200px;
-  background: #fff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 2px 8px #0000001a;
+  background: rgb(0 0 0 / 82%) no-repeat padding-box;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.521);
   border-radius: 8px;
+  border: 2px solid ${yellow};
   padding: 16px;
 `;
 
 export const ModalBody = styled.div`
-  justify-content: center;
-  padding: 0 64px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const TitleModal = styled.h1`
   text-align: center;
-  font-weight: 400;
-  font-size: 28px;
+  font-weight: 600;
+  font-size: 26px;
   letter-spacing: 0;
-  margin: 0 0 16px;
-  color: black;
+  color: ${white};
+`;
+
+export const CloseButton = styled.button`
+  height: 25px;
+  border: none;
+  font-weight: 700;
+  width: 25px;
+  border-radius: 12px;
+  float: right;
+  cursor: pointer;
+
+  &:hover {
+    color: ${gray};
+    border: 2px solid ${yellow};
+  }
+`;
+
+export const ModalContent = styled.span`
+  margin: 5px 0;
 `;
