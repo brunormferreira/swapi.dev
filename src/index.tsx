@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-import { ModalContextProvider } from './context/modal/index';
+import { ModalContextProvider } from './context/modal';
 
 ReactDOM.render(
   <ModalContextProvider>

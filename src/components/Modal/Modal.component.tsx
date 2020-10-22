@@ -4,8 +4,6 @@ import ReducerEnum from '../../context/modal/enum';
 
 import { useModal } from '../../context/modal';
 
-import useOutsideClick from '../../utils/useOutsideClick';
-
 import {
   ContainerBackground,
   ModalFullScreen,
@@ -14,7 +12,11 @@ import {
   ModalBody,
 } from './Modal.styles';
 
-const Modal: React.FC = () => {
+type Props = {
+  movie: any;
+};
+
+const Modal = ({ movie }: Props): JSX.Element => {
   const { dispatch } = useModal();
 
   const dialogContainer = useRef() as React.MutableRefObject<
@@ -22,10 +24,6 @@ const Modal: React.FC = () => {
   >;
 
   const onClose = (): void => dispatch({ type: ReducerEnum.SET_INVISIBLE });
-
-  useOutsideClick(dialogContainer, () => {
-    onClose();
-  });
 
   return (
     <>
@@ -36,7 +34,9 @@ const Modal: React.FC = () => {
             X
           </button>
           <ModalBody>
-            <TitleModal>TESTE</TitleModal>
+            <TitleModal>{movie.title}</TitleModal>
+            <p style={{ color: 'black' }}>~ Episode {movie.episode_id}</p>
+            <div style={{ color: 'black' }}>{movie.opening_crawl}</div>
           </ModalBody>
         </ModalContainer>
       </ModalFullScreen>
