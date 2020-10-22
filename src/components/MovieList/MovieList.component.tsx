@@ -7,6 +7,7 @@ import greenSaber from '../../assets/images/green-saber.svg';
 import redSaber from '../../assets/images/red-saber.svg';
 
 import Modal from '../Modal/Modal.component';
+import Loader from '../Loader/Loader.component';
 
 import { useModal } from '../../context/modal';
 import ReducerEnum from '../../context/modal/enum';
@@ -22,6 +23,7 @@ import {
 } from './Movie.styles';
 
 const MovieList: React.FC = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [movies, setMovies] = useState<any>([]);
   const [index, setIndex] = useState(0);
 
@@ -34,16 +36,18 @@ const MovieList: React.FC = () => {
 
   useEffect(() => {
     getMovies().then(({ results }) => {
+      setIsLoading(true);
       const dataSorted = results.sort(
         (a: any, b: any) => a.episode_id - b.episode_id,
       );
-
       setMovies(dataSorted);
     });
+    setIsLoading(false);
   }, [setMovies]);
 
   return (
     <main>
+      {!isLoading && <Loader />}
       {movies.map((movie: any, idx: any) => (
         <div key={idx}>
           <MovieListWrapper>
