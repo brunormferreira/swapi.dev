@@ -1,7 +1,12 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react';
 
 import greenSaber from '../../assets/images/green-saber.svg';
 import redSaber from '../../assets/images/red-saber.svg';
+
+import { useModal } from '../../context/modal';
+import ReducerEnum from '../../context/modal/enum';
 
 import {
   MovieList,
@@ -17,7 +22,11 @@ type Props = {
   movie: any;
 };
 
-const Movies = ({ movie }: Props): JSX.Element => {
+const Movies = ({ movie }: Props) => {
+  const { dispatch } = useModal();
+
+  const showModal = () => dispatch({ type: ReducerEnum.SET_VISIBLE });
+
   return (
     <MovieList>
       <Title>
@@ -36,13 +45,12 @@ const Movies = ({ movie }: Props): JSX.Element => {
           <li>
             Produced by <span>{movie.producer}</span>
           </li>
+          {/* <li>{movie.opening_crawl}</li> */}
         </MoviesInfo>
         <RedSaber src={redSaber} alt="Red saber" />
       </MoviesContainer>
       <div>
-        <MoreInfoButton
-          onClick={() => alert(`Hi! This movies is ${movie.episode_id}`)}
-        >
+        <MoreInfoButton type="button" onClick={showModal}>
           READ MORE
         </MoreInfoButton>
       </div>
