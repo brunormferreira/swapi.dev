@@ -9,6 +9,10 @@ export const Logo = styled.svg`
   width: 400px;
   height: 270px;
   stroke: ${yellow};
+
+  @media (max-width: 425px) {
+    width: 370px;
+  }
 `;
 
 export const Yoda = styled.img`
@@ -18,4 +22,8 @@ export const Yoda = styled.img`
   height: 80px;
   margin-top: 20px;
   margin-left: 29px;
+
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;

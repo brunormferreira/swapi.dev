@@ -6,7 +6,6 @@ const { yellow, white } = colors;
 
 export const ContainerFooter = styled.footer`
   padding: 20px 0;
-  margin-top: 30px;
   text-align: center;
   color: ${white};
   border-top: 1px solid ${yellow};

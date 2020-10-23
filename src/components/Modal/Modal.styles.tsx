@@ -36,6 +36,10 @@ export const ModalContainer = styled.div`
   border-radius: 8px;
   border: 2px solid ${yellow};
   padding: 16px;
+
+  @media (max-width: 425px) {
+    width: 335px;
+  }
 `;
 
 export const ModalBody = styled.div`
@@ -69,4 +73,8 @@ export const CloseButton = styled.button`
 
 export const ModalContent = styled.span`
   margin: 5px 0;
+
+  @media (max-width: 425px) {
+    font-size: 20px;
+  }
 `;

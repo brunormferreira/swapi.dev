@@ -63,4 +63,8 @@ export const MoreInfoButton = styled.button`
   &:hover {
     background-color: ${lightYellow};
   }
+
+  @media (max-width: 425px) {
+    padding: 12px 8px;
+  }
 `;

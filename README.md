@@ -63,8 +63,7 @@ $ yarn test
 ```
 1. Implement searchbar;
 2. Create more unit scenarios tests;
-3. Add more @media-queries;
-4. Add Cypress to integration tests.
+3. Add Cypress to integration tests.
 ```
 
 ## Author
