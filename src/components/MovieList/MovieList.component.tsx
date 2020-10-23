@@ -21,7 +21,7 @@ import {
   RedSaber,
   MoviesInfo,
   MoreInfoButton,
-} from './Movie.styles';
+} from './MovieList.styles';
 
 const MovieList: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
