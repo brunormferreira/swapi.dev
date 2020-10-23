@@ -1,41 +1,79 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## SWAPI.dev
 
-## Available Scripts
+- This project intends to choose a front-end framework to execute. I choose [React](https://pt-br.reactjs.org/) to do it.
 
-In the project directory, you can run:
+- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### `yarn start`
+<hr />
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of Contents
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- [Used Technologies](#used-technologies)
+- [Required Installation](#required-installation)
+- [Installing Packages](#install-packages)
+- [Running Frontend](#running-frontend)
+  - [Unit Tests](#running-unit-tests)
+- [To do](#to-do)
+- [Author](#author)
 
-### `yarn test`
+<hr />
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Used technologies
 
-### `yarn build`
+```
+React Hooks;
+Styled Componentes;
+Jest;
+Linters and Formatters;
+TypeScript.
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Required installation
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- If you dont have been installed yet, on command line do as follow:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+$ sudo apt install nodejs
+$ yarn install -g create-react-app
+```
 
-### `yarn eject`
+## Installing packages
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+yarn install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Running frontend
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+$ yarn start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Running unit tests
+
+- Execute the unit tests via [react/testing-library](https://testing-library.com/docs/react-testing-library/intro).
+
+```
+$ yarn test
+```
+
+## To do
+
+```
+1. Implement searchbar;
+2. Create more unit scenarios tests;
+3. Add more @media-queries;
+4. Add Cypress to integration tests.
+```
+
+## Author
+
+- **Bruno Ramires de Moraes Ferreira** - [GitHub](https://github.com/brunormferreira)
+
+  <a href="https://github.com/brunormferreira">
+    <img
+    alt="Imagem do Autor Bruno Ramires" src="https://avatars0.githubusercontent.com/u/35575092?s=460&v=4" width="100">
+  </a>
 
 ## Learn More
 
