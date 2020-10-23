@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import React, { createContext, useReducer, useContext } from 'react';
 import reducer from './reducer';
 
@@ -8,7 +7,7 @@ const initialState = {
   isVisible: false,
 };
 
-export const ModalContextProvider = (props: any): any => {
+export const ModalContextProvider = (props: any) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const value = {
@@ -19,7 +18,7 @@ export const ModalContextProvider = (props: any): any => {
   return <ModalContext.Provider value={value} {...props} />;
 };
 
-export const useModal = (): any => {
+export const useModal = () => {
   const context = useContext(ModalContext);
   if (context === undefined) {
     throw new Error('useModal must be used within a ModalContext');
