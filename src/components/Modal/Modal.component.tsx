@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 
 import ReducerEnum from '../../context/modal/enum';
-
 import { useModal } from '../../context/modal';
+
+import MoviesInterface from '../../interfaces/Movies';
 
 import {
   ContainerBackground,
@@ -15,30 +16,28 @@ import {
 } from './Modal.styles';
 
 type Props = {
-  movie: any;
+  movie: MoviesInterface;
 };
 
 const Modal = ({ movie }: Props): JSX.Element => {
   const { dispatch } = useModal();
 
-  const dialogContainer = useRef() as React.MutableRefObject<
-    HTMLTableRowElement
-  >;
+  const { title, episode_id, opening_crawl } = movie;
 
-  const onClose = (): void => dispatch({ type: ReducerEnum.SET_INVISIBLE });
+  const onClose = () => dispatch({ type: ReducerEnum.SET_INVISIBLE });
 
   return (
     <>
       <ContainerBackground />
       <ModalFullScreen>
-        <ModalContainer ref={dialogContainer}>
+        <ModalContainer>
           <CloseButton type="button" onClick={onClose}>
             X
           </CloseButton>
           <ModalBody>
-            <TitleModal>{movie.title}</TitleModal>
-            <ModalContent>~ Episode {movie.episode_id}</ModalContent>
-            <ModalContent>{movie.opening_crawl}</ModalContent>
+            <TitleModal>{title}</TitleModal>
+            <ModalContent>~ Episode {episode_id}</ModalContent>
+            <ModalContent>{opening_crawl}</ModalContent>
           </ModalBody>
         </ModalContainer>
       </ModalFullScreen>
