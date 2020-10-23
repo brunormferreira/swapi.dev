@@ -34,9 +34,12 @@
         "extensions": [".tsx"]
       }
     ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["off"],
+    "camelcase": "off",
     "import/prefer-default-export": "off",
     "@typescript-eslint/explicit-function-return-type": [
-      "error",
+      "warn",
       {
         "allowExpressions": true
       }
