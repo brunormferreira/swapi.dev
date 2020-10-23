@@ -1,4 +1,3 @@
-/* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
 
 import { getMovies } from '../../services/getMovies';
@@ -12,6 +11,8 @@ import Loader from '../Loader/Loader.component';
 import { useModal } from '../../context/modal';
 import ReducerEnum from '../../context/modal/enum';
 
+import MoviesInterface from '../../interfaces/Movies';
+
 import {
   MovieListWrapper,
   Title,
@@ -24,8 +25,8 @@ import {
 
 const MovieList: React.FC = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [movies, setMovies] = useState<any>([]);
-  const [index, setIndex] = useState(0);
+  const [movies, setMovies] = useState<MoviesInterface[]>([]);
+  const [index, setIndex] = useState<number>(0);
 
   const { state, dispatch } = useModal();
 
@@ -48,8 +49,8 @@ const MovieList: React.FC = () => {
   return (
     <main>
       {!isLoading && <Loader />}
-      {movies.map((movie: any, idx: any) => (
-        <div key={idx}>
+      {movies.map((movie: MoviesInterface, idx: string | number | any) => (
+        <div key={movie.episode_id}>
           <MovieListWrapper>
             <Title>
               {movie.title}
