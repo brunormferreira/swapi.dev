@@ -1,9 +1,7 @@
 import React from 'react';
 
 import { render } from '@testing-library/react';
-import fireEvent from '@testing-library/user-event';
 import Modal from '../Modal.component';
-import Main from '../../../pages/Main.page';
 
 const MOCK = {
   director: 'string',

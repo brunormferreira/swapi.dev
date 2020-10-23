@@ -47,7 +47,7 @@ const MovieList: React.FC = () => {
   }, [setMovies]);
 
   return (
-    <main>
+    <main data-testid="movie-list-component">
       {!isLoading && <Loader />}
       {movies.map((movie: MoviesInterface, idx: number) => (
         <div key={movie.episode_id}>
