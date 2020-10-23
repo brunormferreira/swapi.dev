@@ -23,6 +23,7 @@
 ```
 React Hooks;
 Styled Componentes;
+Axios;
 Jest;
 Linters and Formatters;
 TypeScript.
