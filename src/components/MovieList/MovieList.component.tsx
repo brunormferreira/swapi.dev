@@ -30,8 +30,8 @@ const MovieList: React.FC = () => {
 
   const { state, dispatch } = useModal();
 
-  const showModal = (idx: any): void => {
-    setIndex(idx);
+  const showModal = (indexModal: number): void => {
+    setIndex(indexModal);
     dispatch({ type: ReducerEnum.SET_VISIBLE });
   };
 
@@ -49,7 +49,7 @@ const MovieList: React.FC = () => {
   return (
     <main>
       {!isLoading && <Loader />}
-      {movies.map((movie: MoviesInterface, idx: string | number | any) => (
+      {movies.map((movie: MoviesInterface, idx: number) => (
         <div key={movie.episode_id}>
           <MovieListWrapper>
             <Title>
