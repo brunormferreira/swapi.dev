@@ -5,7 +5,7 @@ import './Loader.css';
 
 const Loader = (): JSX.Element => {
   return (
-    <div className="lds-ellipsis">
+    <div className="lds-ellipsis" data-testid="loader-component">
       <div></div>
       <div></div>
       <div></div>
