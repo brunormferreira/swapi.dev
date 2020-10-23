@@ -30,7 +30,7 @@ const Modal = ({ movie }: Props): JSX.Element => {
     <>
       <ContainerBackground />
       <ModalFullScreen>
-        <ModalContainer>
+        <ModalContainer data-testid="modal-component">
           <CloseButton type="button" onClick={onClose}>
             X
           </CloseButton>
