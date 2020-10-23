@@ -3,7 +3,7 @@ import React from 'react';
 import { Svg } from './Brand.styles';
 
 const Brand: React.FC = () => (
-  <Svg viewBox="0 0 189.333 107.333">
+  <Svg viewBox="0 0 189.333 107.333" data-testid="brand-component">
     <path
       d="M148.175,66.501c0.182,3.29,0.787,7.427,6.254,12.398
         c4.987,4.533-2.469,3.289-3.218,3.289c0,0-11.689-0.012-14.726-0.012c-3.036,
