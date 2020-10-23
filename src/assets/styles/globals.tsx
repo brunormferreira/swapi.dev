@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 import bg from '../images/bg.jpg';
+import { colors } from './variables';
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900&display=swap');
@@ -15,12 +16,12 @@ const GlobalStyle = createGlobalStyle`
 body {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-
+  background-color: ${colors.black};
   background-image: url(${bg});
 }
 
 body::-webkit-scrollbar {
-  background-color: black;
+  background-color: ${colors.black};
   width: 1em;
 }
 
@@ -29,7 +30,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #FFE81F;
+  background-color: ${colors.yellow};
 }
 `;
 
