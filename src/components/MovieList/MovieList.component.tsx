@@ -44,7 +44,7 @@ const MovieList: React.FC = () => {
       setMovies(dataSorted);
     });
     setIsLoading(false);
-  }, [setMovies]);
+  }, []);
 
   return (
     <main data-testid="movie-list-component">
